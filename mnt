@@ -1,0 +1,33 @@
+#!/bin/bash
+set -x
+
+if [ ! -d "/mnt/op5" ]
+then
+    echo "directory not exists."
+    sudo mkdir -p /mnt/op5
+fi
+sudo mount -t nfs 192.168.1.65:/home/s/bak /mnt/op5
+
+
+#if [ ! -d "/mnt/khadas" ]
+#then
+#    echo "directory not exists."
+#    sudo mkdir -p /mnt/khadas
+#fi
+#sudo mount -t nfs 192.168.1.32:/mnt/ssd /mnt/khadas
+
+if [ ! -d "/mnt/ubuntu" ]
+then
+    echo "directory not exists."
+    sudo mkdir -p /mnt/ubuntu
+fi
+sudo mount -t nfs 192.168.2.235:/shared /mnt/ubuntu
+
+
+#if [[ -d "/mnt/sda3" ]]
+#then
+#    mkdir -p /mnt/sda3
+#fi
+#mount /dev/sda3 /mnt/sda3
+
+
